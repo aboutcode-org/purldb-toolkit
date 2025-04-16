@@ -115,3 +115,8 @@ rst_prolog = """
 # -- Options for LaTeX output -------------------------------------------------
 
 latex_elements = {"classoptions": ",openany,oneside"}
+
+
+linkcheck_anchors_ignore_for_url = [
+    "https://public.purldb.io/api/docs",
+]

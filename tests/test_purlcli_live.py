@@ -244,50 +244,6 @@ class TestPURLCLI_metadata:
                             "metadata": [
                                 OrderedDict(
                                     [
-                                        ("purl", "pkg:pypi/fetchcode"),
-                                        ("type", "pypi"),
-                                        ("namespace", None),
-                                        ("name", "fetchcode"),
-                                        ("version", None),
-                                        ("qualifiers", OrderedDict()),
-                                        ("subpath", None),
-                                        ("primary_language", None),
-                                        ("description", None),
-                                        ("release_date", None),
-                                        ("parties", []),
-                                        ("keywords", []),
-                                        (
-                                            "homepage_url",
-                                            "https://github.com/nexB/fetchcode",
-                                        ),
-                                        ("download_url", None),
-                                        (
-                                            "api_url",
-                                            "https://pypi.org/pypi/fetchcode/json",
-                                        ),
-                                        ("size", None),
-                                        ("sha1", None),
-                                        ("md5", None),
-                                        ("sha256", None),
-                                        ("sha512", None),
-                                        ("bug_tracking_url", None),
-                                        ("code_view_url", None),
-                                        ("vcs_url", None),
-                                        ("copyright", None),
-                                        ("license_expression", None),
-                                        ("declared_license", "Apache-2.0"),
-                                        ("notice_text", None),
-                                        ("root_path", None),
-                                        ("dependencies", []),
-                                        ("contains_source_code", None),
-                                        ("source_packages", []),
-                                        ("repository_homepage_url", None),
-                                        ("repository_download_url", None),
-                                        ("api_data_url", None),
-                                    ]
-                                ),
-                                OrderedDict(
-                                    [
                                         ("purl", "pkg:pypi/fetchcode@0.1.0"),
                                         ("type", "pypi"),
                                         ("namespace", None),
@@ -295,6 +251,9 @@ class TestPURLCLI_metadata:
                                         ("version", "0.1.0"),
                                         ("qualifiers", OrderedDict()),
                                         ("subpath", None),
+                                        ("repository_homepage_url", None),
+                                        ("repository_download_url", None),
+                                        ("api_data_url", None),
                                         ("primary_language", None),
                                         ("description", None),
                                         ("release_date", None),
@@ -302,7 +261,7 @@ class TestPURLCLI_metadata:
                                         ("keywords", []),
                                         (
                                             "homepage_url",
-                                            "https://github.com/nexB/fetchcode",
+                                            "https://github.com/aboutcode-org/fetchcode",
                                         ),
                                         (
                                             "download_url",
@@ -328,9 +287,6 @@ class TestPURLCLI_metadata:
                                         ("dependencies", []),
                                         ("contains_source_code", None),
                                         ("source_packages", []),
-                                        ("repository_homepage_url", None),
-                                        ("repository_download_url", None),
-                                        ("api_data_url", None),
                                     ]
                                 ),
                                 OrderedDict(
@@ -342,6 +298,9 @@ class TestPURLCLI_metadata:
                                         ("version", "0.2.0"),
                                         ("qualifiers", OrderedDict()),
                                         ("subpath", None),
+                                        ("repository_homepage_url", None),
+                                        ("repository_download_url", None),
+                                        ("api_data_url", None),
                                         ("primary_language", None),
                                         ("description", None),
                                         ("release_date", None),
@@ -349,7 +308,7 @@ class TestPURLCLI_metadata:
                                         ("keywords", []),
                                         (
                                             "homepage_url",
-                                            "https://github.com/nexB/fetchcode",
+                                            "https://github.com/aboutcode-org/fetchcode",
                                         ),
                                         (
                                             "download_url",
@@ -375,9 +334,6 @@ class TestPURLCLI_metadata:
                                         ("dependencies", []),
                                         ("contains_source_code", None),
                                         ("source_packages", []),
-                                        ("repository_homepage_url", None),
-                                        ("repository_download_url", None),
-                                        ("api_data_url", None),
                                     ]
                                 ),
                                 OrderedDict(
@@ -389,6 +345,9 @@ class TestPURLCLI_metadata:
                                         ("version", "0.3.0"),
                                         ("qualifiers", OrderedDict()),
                                         ("subpath", None),
+                                        ("repository_homepage_url", None),
+                                        ("repository_download_url", None),
+                                        ("api_data_url", None),
                                         ("primary_language", None),
                                         ("description", None),
                                         ("release_date", None),
@@ -396,7 +355,7 @@ class TestPURLCLI_metadata:
                                         ("keywords", []),
                                         (
                                             "homepage_url",
-                                            "https://github.com/nexB/fetchcode",
+                                            "https://github.com/aboutcode-org/fetchcode",
                                         ),
                                         (
                                             "download_url",
@@ -422,9 +381,6 @@ class TestPURLCLI_metadata:
                                         ("dependencies", []),
                                         ("contains_source_code", None),
                                         ("source_packages", []),
-                                        ("repository_homepage_url", None),
-                                        ("repository_download_url", None),
-                                        ("api_data_url", None),
                                     ]
                                 ),
                             ],

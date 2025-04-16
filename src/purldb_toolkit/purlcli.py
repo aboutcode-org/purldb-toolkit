@@ -163,7 +163,7 @@ def check_metadata_purl(purl):
         return "validation_error"
     results = check_validation
 
-    if not results["valid"]:
+    if results["valid"] == False:
         return "not_valid"
 
     # This is manually constructed from a visual inspection of fetchcode/package.py.
@@ -180,11 +180,11 @@ def check_metadata_purl(purl):
     if metadata_purl.type not in metadata_supported_ecosystems:
         return "valid_but_not_supported"
 
-    if results["exists"] is None:
-        return "check_existence_not_supported"
-
-    if not results["exists"]:
+    if results["exists"] == False:
         return "not_in_upstream_repo"
+
+    if results["exists"] == None:
+        return "check_existence_not_supported"
 
 
 def normalize_purls(purls, unique):
@@ -287,7 +287,7 @@ def construct_headers(
 
     log_file = Path(LOG_FILE_LOCATION)
     if log_file.is_file():
-        with open(log_file) as f:
+        with open(log_file, "r") as f:
             for line in f:
                 errors.append(line)
 
@@ -493,7 +493,7 @@ def check_urls_purl(purl):
         return "validation_error"
     results = check_validation
 
-    if not results["valid"]:
+    if results["valid"] == False:
         return "not_valid"
 
     # Both of these lists are manually constructed from a visual inspection of
@@ -535,7 +535,7 @@ def check_urls_purl(purl):
     ):
         return "valid_but_not_supported"
 
-    if not results["exists"]:
+    if results["exists"] == False:
         return "not_in_upstream_repo"
 
     if (
@@ -655,16 +655,16 @@ def check_validate_purl(purl):
         return "validation_error"
     results = check_validation
 
-    if not results["valid"]:
+    if results["valid"] == False:
         return "not_valid"
 
-    if not results["exists"]:
+    if results["exists"] == False:
         return "not_in_upstream_repo"
 
-    if results["exists"]:
+    if results["exists"] == True:
         return check_validation
 
-    if results["exists"] is None:
+    if results["exists"] == None:
         return "check_existence_not_supported"
 
 
@@ -872,7 +872,7 @@ def check_versions_purl(purl):
         return "validation_error"
     results = check_validation
 
-    if not results["valid"]:
+    if results["valid"] == False:
         return "not_valid"
 
     supported = SUPPORTED_ECOSYSTEMS
@@ -881,10 +881,10 @@ def check_versions_purl(purl):
     if versions_purl.type not in supported:
         return "valid_but_not_supported"
 
-    if not results["exists"]:
+    if results["exists"] == False:
         return "not_in_upstream_repo"
 
-    if results["exists"] is None:
+    if results["exists"] == None:
         return "check_existence_not_supported"
 
     # This handles the conflict between the `validate`` endpoint (treats
@@ -1025,7 +1025,7 @@ def validate_purls_for_d2d(ctx, param, value):
 
     elif len_purls != 2:
         raise click.BadParameter(
-            "Invalid number of --purl options. There should be exactly two --purl options."
+            f"Invalid number of --purl options. There should be exactly two --purl options."
         )
 
     elif not (all_purls(purls) or all_urls(purls)):
