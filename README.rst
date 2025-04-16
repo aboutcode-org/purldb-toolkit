@@ -4,12 +4,15 @@ purldb-toolkit
 .. contents:: :local:
     :depth: 3
 
-purldb-toolkit is a command line utility and library to use the PurlDB, its API and various related libraries.
+purldb-toolkit is a command line utility and library to use the PurlDB, its API
+and various related libraries.
 
-purldb-toolkit exposes the ``purlcli`` command that acts as a client to the PURL libraries,
-the PurlDB and MatchCode REST API and exposes various PURL-based services.
+purldb-toolkit exposes the ``purlcli`` command that acts as a client to the PURL
+libraries, the PurlDB and MatchCode REST API and exposes various PURL-based
+services.
 
-purldb-toolkit serves as a tool, a library and an example of how to use the services programmatically.
+purldb-toolkit serves as a tool, a library and an example of how to use the
+services programmatically.
 
 
 Installation
@@ -216,7 +219,8 @@ Details
 
 ``versions`` calls ``versions()`` from `fetchcode/package_versions.py`.
 
-Version information is not needed in submitted PURLs and, if included, will be removed before processing.
+Version information is not needed in submitted PURLs and, if included, will be
+removed before processing.
 
 
 ----
@@ -363,8 +367,9 @@ The intended output for each PURL type supported by the ``metadata`` command is:
 ``urls``: collect package URLs for a PURL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This command collects and return the known URL for a PURL. It does so by based on package type/ecosystem
-conventions. It optionally also checks if the inferred URLs exists on the web.
+This command collects and return the known URL for a PURL. It does so by based
+on package type/ecosystem conventions. It optionally also checks if the inferred
+URLs exists on the web.
 
 Examples
 ########
@@ -574,14 +579,16 @@ Finally run the command:
 .. code-block:: console
 
     purlcli d2d \
-        --purl https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/4.0.0-incubating/htrace-core-4.0.0-incubating-sources.jar \
-        --purl https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/4.0.0-incubating/htrace-core-4.0.0-incubating.jar \
-        --matchcode-api-url http://127.0.0.1:8002/api/
+        --purl
+        https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/4.0.0-incubating/htrace-core-4.0.0-incubating-sources.jar
+        \ --purl
+        https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/4.0.0-incubating/htrace-core-4.0.0-incubating.jar
+        \ --matchcode-api-url http://127.0.0.1:8002/api/
 
 *Sample output:*
 
-Here you can see that there are over 730 resources that require review and that may be present in the
-binary and not present in the sources.
+Here you can see that there are over 730 resources that require review and that
+may be present in the binary and not present in the sources.
 
 .. code-block:: json
 

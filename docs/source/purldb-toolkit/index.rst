@@ -1,1 +1,1 @@
-.. include:: ../../../purldb-toolkit/README.rst
+.. include:: ../../../README.rst
