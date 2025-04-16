@@ -1,12 +1,13 @@
-Welcome to nexb-skeleton's documentation!
-=========================================
+Welcome to purldb-toolkit's documentation!
+==========================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   skeleton-usage
+   purldb-toolkit/index
    contribute/contrib_doc
+   purldb-toolkit/testing
 
 Indices and tables
 ==================
