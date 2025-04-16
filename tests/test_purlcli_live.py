@@ -241,7 +241,7 @@ class TestPURLCLI_metadata:
                     "packages": [
                         {
                             "purl": "pkg:pypi/fetchcode",
-                        "metadata": [
+                            "metadata": [
                                 OrderedDict(
                                     [
                                         ("purl", "pkg:pypi/fetchcode@0.1.0"),
