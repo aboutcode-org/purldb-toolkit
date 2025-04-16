@@ -49,6 +49,10 @@ test:
 	@echo "-> Run the test suite"
 	${VENV}/bin/pytest -vvs
 
+test-live:
+		@echo "-> Run the test suite"
+		${VENV}/bin/pytest -vvs --run_live_fetch
+
 docs:
 	rm -rf docs/_build/
 	@${ACTIVATE} sphinx-build docs/source docs/_build/
